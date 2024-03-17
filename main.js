@@ -2,7 +2,8 @@ const pokemon_container = document.querySelector(".poke-container")
 const search = document.querySelector(".search")
 const searchBtn = document.querySelector(".searchBtn")
 const searchInput = document.querySelector(".searchInput")
-
+const pokeBall= document.querySelector(".poke-ball")
+const pokeMusic= document.querySelector("#pokeMusic")
 const pokemon_count = 1025
 
 const bg_color = {
@@ -22,6 +23,25 @@ const bg_color = {
   dragon: '#7766EE',
   ice: '#66CCFF',
 }
+
+
+
+
+
+pokeBall.addEventListener('click', function() {
+  if (pokeMusic.paused) {
+   // pokeMusic.style.display = 'block';
+    pokeMusic.play();
+  } else {
+   // pokeMusic.style.display = 'none';
+    pokeMusic.pause();
+  }
+});
+
+
+
+
+
 
 searchBtn.addEventListener("click",()=> {
   search.classList.toggle("active")
